@@ -81,7 +81,7 @@ section {
     background: url(img/logo-hr.png) center bottom no-repeat;
 }
 
-#tools-for-bloggers, #about, #getticket {
+#tools-for-bloggers, #about, #getticket, #previousevents {
     background: none;
     padding-bottom: 75px;
 }
@@ -201,10 +201,20 @@ footer {
     text-align: center;
     height: 30px;
     line-height: 30px;
+    color: rgb(255, 255, 255);
 }
 
 footer a {
     color: rgb(255, 255, 255);
+}
+
+#mageucevents li {
+    list-style: none;
+    margin: 75px 0 25px 0;
+}
+
+#mageucevents a {
+    display: block;
 }
 
 #party-sponsors, #sweets-sponsors {
