@@ -60,7 +60,7 @@ p, ol {
 }
 
 header {
-    background: transparent url(img/MageUC-Logo.png) center 120px no-repeat;
+    background: transparent url(img/MageUC-Logo.svg) center 120px no-repeat;
     height: 130px;
     padding: 250px 0 10px 0;
     text-align: center;
@@ -435,7 +435,7 @@ p > .framed {
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
 
     header {
-        background: transparent url(img/MageUC-Logo@2x.png) center 120px no-repeat;
+        background: transparent url(img/MageUC-Logo.svg) center 120px no-repeat;
         background-size: 360px 117px;
     }
 
