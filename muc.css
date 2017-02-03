@@ -226,6 +226,8 @@ footer a {
 #sponsors {
     padding-left: 175px;
     padding-right: 175px;
+    display: inline-block;
+    padding-bottom: 40px;
 }
 
 
