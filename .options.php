@@ -2,20 +2,18 @@
 
 $lines = file('.options');
 
-$csvHeader = [
-
-    "My name as supporter on homepage (. for anonym)"               => "My name as supporter on homepage (. for anonym)",
-    "Name on T-Shirt"                                               => "Name on T-Shirt",
-    "Company"                                                       => "Company",
-    "T-Shirt size (hopefully paid)"                                 => "T-Shirt size (hopefully paid)",
-    "Twitter Handle"                                                => "Twitter Handle",
-    "github Handle"                                                 => "github Handle",
-    "Attendee's eMail Address"                                      => "Attendee's eMail Address",
-    "Special needs (vegeterian, vegan, wheelchair, allergies, ...)" => "Special needs (vegeterian, vegan, wheelchair, allergies, ...)",
-];
-ksort($csvHeader);
+$csvHeader = [];
 $csvData = [];
+// collect csvHeader
 
+foreach ($lines as $line) {
+    $data = unserialize($line);
+    foreach ($data['options'] as $o) {
+        $csvHeader[$o['label']] = $o['label'];
+    }
+}
+ksort($csvHeader);
+// make data csv
 foreach ($lines as $line) {
     $data = unserialize($line);
     $csvDataOneLine = array_combine($csvHeader, array_fill(0, count($csvHeader), ''));
