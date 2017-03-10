@@ -52,6 +52,10 @@ p, ol {
     padding-bottom: 13px;
 }
 
+img {
+    max-width: 100%;
+}
+
 .credit {
     text-align: right;
     font-size: 0.75rem;
@@ -238,6 +242,10 @@ footer a {
     display: inline-block;
     width: 20%;
     height: 75px;
+}
+
+.sponsors img {
+    max-width: none;
 }
 
 img.sponsorlogo {
