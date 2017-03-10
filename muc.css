@@ -222,21 +222,19 @@ footer a {
     padding-right: 175px;
 }
 
-
-#sponsors {
+.sponsors {
     padding-left: 175px;
     padding-right: 175px;
     display: inline-block;
     padding-bottom: 40px;
 }
 
-
-#sponsors li {
+.sponsors li {
     float: left;
     list-style: none;
 }
 
-#sponsors a {
+.sponsors a {
     display: inline-block;
     width: 20%;
     height: 75px;
@@ -409,16 +407,19 @@ p > .framed {
         padding: 5% 15% 10% 15%;
     }
 
-    #financial h2, #financial p, #location h2, #location p, #party-sponsors, #sweets-sponsors, #sponsors {
+    #financial h2, #financial p, #location h2, #location p, #party-sponsors, #sweets-sponsors, .sponsors {
         margin-left: 15%;
         margin-right: 15%;
     }
-    #sponsors {
+
+    .sponsors {
         padding: 0;
     }
-    #party-sponsors, #sweets-sponsors  {
+
+    #party-sponsors, #sweets-sponsors {
         padding: 0 0 0 20px;
     }
+
     .container-autoflow {
         max-width: 100%;
         overflow: auto;
@@ -429,6 +430,7 @@ p > .framed {
     #timetable {
         padding: 10px 5px 40px;
     }
+
     .wrapper {
         min-width: 0;
     }
@@ -453,8 +455,8 @@ p > .framed {
 }
 
 @media (max-width: 430px) and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-	header {
-		background-size: 75%;
-	}
+    header {
+        background-size: 75%;
+    }
 
 }
