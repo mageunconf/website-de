@@ -7,7 +7,11 @@ $csvData   = [];
 // collect csvHeader
 
 foreach ($lines as $line) {
-    $data = unserialize(trim($line));
+    $data = unserialize(trim($line), ['allow_classes' => false]);
+    if(!is_array($data)) {
+        var_dump($data, $line);
+        die('No array.');
+    }
     foreach ($data['options'] as $o) {
         $csvHeader[$o['label']] = $o['label'];
     }
@@ -30,9 +34,9 @@ foreach ($lines as $line) {
     $csvData[] = $csvDataOneLine;
 }
 $time = microtime(true);
-$handle = fopen(".shirts-$time.csv", 'w');
-fputcsv($handle, $csvHeader);
+$handle = fopen(".shirts-$time.csv", 'wb');
+fputcsv($handle, $csvHeader, "\t");
 foreach ($csvData as $line) {
-    fputcsv($handle, $line);
+    fputcsv($handle, $line, "\t");
 }
 fclose($handle);
