@@ -1,5 +1,5 @@
 <?php
-
+file_put_contents('.options', str_replace("\n\n", '    ', file_get_contents('.options')));
 $lines = file('.options');
 
 $csvHeader = [];
